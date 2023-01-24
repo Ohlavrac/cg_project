@@ -73,19 +73,17 @@ def main():
             elif pygame.key.get_pressed()[K_d]:
                 glTranslatef(1, 0, 0)
                 
-            #Almentar o tamanho do quadrado
             elif pygame.key.get_pressed()[K_q]:
                 current_action = 'AUMENTANDO...'
                 glScalef(1.1 , 1.1, 1.1)
                 
-            #Diminui o tamanho do quadrado
             elif pygame.key.get_pressed()[K_e]:
                 current_action = 'DIMINUINDO...'
                 glScalef(0.8 , 0.8, 0.8)
             else:
                 current_action = ''
                 
-        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT) #atualiza a tela (Se comentar essa linha quando mover o cubo ele ser duplicado)
+        glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT)
         square_colored()
         text(1, 550, current_action)
         pygame.display.flip()
