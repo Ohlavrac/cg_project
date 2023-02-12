@@ -86,6 +86,10 @@ def main():
                 glTranslatef(-1, 0, 0)
             elif pygame.key.get_pressed()[K_d]:
                 glTranslatef(1, 0, 0)
+            elif pygame.key.get_pressed()[K_f]:
+                glTranslatef(0, 0, 1)
+            elif pygame.key.get_pressed()[K_g]:
+                glTranslatef(0, 0, -1)
                 
             elif pygame.key.get_pressed()[K_q]:
                 current_action = 'AUMENTANDO...'
